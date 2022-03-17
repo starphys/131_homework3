@@ -7,8 +7,13 @@ myapp_obj = Flask(__name__)
 def home():
     name = "Lisa"
     city_names = ["Paris", "London", "Rome", "Tahiti"]
-    return f"""<h1>Welcome {name}!</h1>
-        <a href="https://www.google.com">not google</a>"""
+    return_string = f"""<h1>Welcome {name}!</h1>
+        <a href="https://www.google.com">not google</a>
+        <ul>"""
+    for city in city_names:
+        return_string += f"<li>{city}</li>"
+    return_string += "</ul>"
+    return return_string
 
 
 myapp_obj.run()
