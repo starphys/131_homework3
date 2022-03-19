@@ -4,7 +4,7 @@ myapp_obj = Flask(__name__)
 name = "Lisa"
 city_names = ["Paris", "London", "Rome", "Tahiti"]
 
-@myapp_obj.route("")
+@myapp_obj.route("/")
 def home():
     return_string = f"""<h1>Welcome, {name}!</h1>
         <a href="www.google.com">not google</a>
