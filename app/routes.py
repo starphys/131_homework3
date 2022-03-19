@@ -10,6 +10,6 @@ def home():
         return render_template("home.html", name=name, city_names=city_names)
 
     if request.method == "POST":
-        user_input = request.form["inputcity"]
+        user_input = request.form["user_input"]
         flash(user_input)
         return render_template("home.html", name=name, city_names=city_names)
